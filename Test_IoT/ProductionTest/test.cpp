@@ -21,8 +21,7 @@ extern "C"
 	SETUP:
 
 	1) Disable the precompiled headers
-	2) Add "drivers" and "fff-master" Include Directories in the project
-	3) Add "drivers" in the Library Directories of the project
+	2) Add "drivers" to Include Directories in the project
 
 */
 
@@ -123,7 +122,7 @@ TEST_F(Temp_Hum_Test, Test_Temp_Hum_Create_driver_and_get_temperature_humidity) 
 	temp_latestTemperature = temp_hum_getLatestTemperature(TEMP_HUM_Sensor);
 
 	//	Assert
-	EXPECT_TRUE(1, hih8120_create_fake.call_count);
+	EXPECT_TRUE(1 == hih8120_create_fake.call_count);
 	ASSERT_TRUE(NULL != TEMP_HUM_Sensor);
 	ASSERT_TRUE(temp_latestHumidity == 150);
 	EXPECT_TRUE(temp_latestTemperature == 25);
