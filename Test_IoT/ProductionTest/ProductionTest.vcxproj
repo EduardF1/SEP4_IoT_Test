@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{664544cc-d2a6-4904-af59-585901b8e8d6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Test_IoT\Test_IoT\ProductionTest\drivers;D:\Test_IoT\fff-master;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Test_IoT\Test_IoT\ProductionTest\FreeRTOS;D:\Test_IoT\Test_IoT\ProductionTest\drivers;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>D:\Test_IoT\Test_IoT\ProductionTest;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="co2.c" />
+    <ClCompile Include="pir_sensor.c" />
+    <ClCompile Include="temp_hum_sensor.c" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="drivers\docs\ab-encoder_8h.html" />
+    <None Include="drivers\docs\ab-encoder_8h_source.html" />
+    <None Include="drivers\docs\ab__encoder_8h.html" />
+    <None Include="drivers\docs\ab__encoder_8h_source.html" />
+    <None Include="drivers\docs\annotated.html" />
+    <None Include="drivers\docs\app__config_8h.html" />
+    <None Include="drivers\docs\app__config_8h_source.html" />
+    <None Include="drivers\docs\classes.html" />
+    <None Include="drivers\docs\croutine_8c.html" />
+    <None Include="drivers\docs\croutine_8h.html" />
+    <None Include="drivers\docs\croutine_8h_source.html" />
+    <None Include="drivers\docs\dir_000000_000004.html" />
+    <None Include="drivers\docs\dir_000000_000013.html" />
+    <None Include="drivers\docs\dir_000001_000000.html" />
+    <None Include="drivers\docs\dir_000001_000005.html" />
+    <None Include="drivers\docs\dir_000002_000003.html" />
+    <None Include="drivers\docs\dir_000003_000004.html" />
+    <None Include="drivers\docs\dir_000003_000005.html" />
+    <None Include="drivers\docs\dir_000004_000005.html" />
+    <None Include="drivers\docs\dir_000004_000006.html" />
+    <None Include="drivers\docs\dir_000005_000006.html" />
+    <None Include="drivers\docs\dir_000005_000007.html" />
+    <None Include="drivers\docs\dir_000006_000000.html" />
+    <None Include="drivers\docs\dir_000006_000001.html" />
+    <None Include="drivers\docs\dir_000006_000007.html" />
+    <None Include="drivers\docs\dir_000006_000008.html" />
+    <None Include="drivers\docs\dir_000007_000000.html" />
+    <None Include="drivers\docs\dir_000007_000001.html" />
+    <None Include="drivers\docs\dir_000007_000008.html" />
+    <None Include="drivers\docs\dir_000008_000002.html" />
+    <None Include="drivers\docs\dir_000008_000010.html" />
+    <None Include="drivers\docs\dir_000008_000013.html" />
+    <None Include="drivers\docs\dir_000009_000010.html" />
+    <None Include="drivers\docs\dir_000009_000013.html" />
+    <None Include="drivers\docs\dir_000014_000003.html" />
+    <None Include="drivers\docs\dir_00f6c05c97c382b10572f2cef014b948.html" />
+    <None Include="drivers\docs\dir_082c842c159c035364ae9e08ff54691e.html" />
+    <None Include="drivers\docs\dir_0ace0053955efad8c28d5324dc29c65f.html" />
+    <None Include="drivers\docs\dir_0af75b5c3ff88248daabee0dc0b278eb.html" />
+    <None Include="drivers\docs\dir_0c43926c56adeeff74d31d81430772e5.html" />
+    <None Include="drivers\docs\dir_14741bd42822f3e978a5b38a7dcbb079.html" />
+    <None Include="drivers\docs\dir_151b4798b005dea8c5eb6554c89d10dd.html" />
+    <None Include="drivers\docs\dir_221afbd10570f9ed5449989c5a66cd36.html" />
+    <None Include="drivers\docs\dir_22d7998687b8130a0d3a8e7456689a70.html" />
+    <None Include="drivers\docs\dir_2841e08de71c5aee820a2d6efe15b513.html" />
+    <None Include="drivers\docs\dir_2ae9c418a3cd9fd74433825eb9c83946.html" />
+    <None Include="drivers\docs\dir_2ff407ef90cb6792159d784e6a40cfc0.html" />
+    <None Include="drivers\docs\dir_371ec092f6df28856f1ba13f6a56e338.html" />
+    <None Include="drivers\docs\dir_39c929d707f0866085390a4db229d91e.html" />
+    <None Include="drivers\docs\dir_40e92f79a91d2b6136c47201877b1bf1.html" />
+    <None Include="drivers\docs\dir_42eef41b5decb2838db6f241c285fa15.html" />
+    <None Include="drivers\docs\dir_4add8d7248e17903521621044f5370f8.html" />
+    <None Include="drivers\docs\dir_509917bc51c39a8f156a09b3ffb44dd4.html" />
+    <None Include="drivers\docs\dir_52c912f73dac9c4c0e442232e1b2bd80.html" />
+    <None Include="drivers\docs\dir_5701bf07c5cfa8c6440c9ad8182f1846.html" />
+    <None Include="drivers\docs\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <None Include="drivers\docs\dir_7a69ee0676d25f5dc8b5e4e0d536f547.html" />
+    <None Include="drivers\docs\dir_7ee3313f2f2b51e5912ce739ee34b9ef.html" />
+    <None Include="drivers\docs\dir_8484729e8a9db60f0bdd9dbad97aaadb.html" />
+    <None Include="drivers\docs\dir_879298ac28563d850177c785aed84459.html" />
+    <None Include="drivers\docs\dir_8a582794db4ec7e08ad94f0815516183.html" />
+    <None Include="drivers\docs\dir_9aa49ab34ab82f6f8cd883673656302f.html" />
+    <None Include="drivers\docs\dir_9aacfe8ed3fb88a85a2a00e7b537decd.html" />
+    <None Include="drivers\docs\dir_a1b4c405cd9522035c77adf4660b616d.html" />
+    <None Include="drivers\docs\dir_ac363d01d23b50564a36fbc8f7761a67.html" />
+    <None Include="drivers\docs\dir_b5cd3bf9be1af1c806a9c41029760273.html" />
+    <None Include="drivers\docs\dir_b88603df084e1fd3e1d2e0bf5026c6c8.html" />
+    <None Include="drivers\docs\dir_c44bcc9d63e5d9835c7a5039232abca2.html" />
+    <None Include="drivers\docs\dir_c5b59151d6c1325e022e4ba605eb40f8.html" />
+    <None Include="drivers\docs\dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html" />
+    <None Include="drivers\docs\dir_cee095fa84d310086f5fd8736dc6bd5d.html" />
+    <None Include="drivers\docs\dir_d44c64559bbebec7f509842c48db8b23.html" />
+    <None Include="drivers\docs\dir_d7118de178bfbe920ee67df3a72c5a10.html" />
+    <None Include="drivers\docs\dir_daf006bf370631de7763a06831ce3019.html" />
+    <None Include="drivers\docs\dir_ddd887597936ff9bd260c052963dcb67.html" />
+    <None Include="drivers\docs\dir_de9521ec51695fd4a2960e50f561778e.html" />
+    <None Include="drivers\docs\dir_e709818e9c1b7c29da3b5d168a66ec0e.html" />
+    <None Include="drivers\docs\dir_fe476c797efcc66965b597e761a5a255.html" />
+    <None Include="drivers\docs\display_7seg_driver_quickstart.html" />
+    <None Include="drivers\docs\display__7seg_8h.html" />
+    <None Include="drivers\docs\display__7seg_8h_source.html" />
+    <None Include="drivers\docs\event__groups_8c.html" />
+    <None Include="drivers\docs\event__groups_8h.html" />
+    <None Include="drivers\docs\event__groups_8h_source.html" />
+    <None Include="drivers\docs\fifo_8c.html" />
+    <None Include="drivers\docs\fifo_8h.html" />
+    <None Include="drivers\docs\fifo_8h_source.html" />
+    <None Include="drivers\docs\fifo_quickstart.html" />
+    <None Include="drivers\docs\fifo_use_case_1.html" />
+    <None Include="drivers\docs\files.html" />
+    <None Include="drivers\docs\functions.html" />
+    <None Include="drivers\docs\functions_vars.html" />
+    <None Include="drivers\docs\globals.html" />
+    <None Include="drivers\docs\globals_b.html" />
+    <None Include="drivers\docs\globals_c.html" />
+    <None Include="drivers\docs\globals_d.html" />
+    <None Include="drivers\docs\globals_defs.html" />
+    <None Include="drivers\docs\globals_defs_d.html" />
+    <None Include="drivers\docs\globals_defs_e.html" />
+    <None Include="drivers\docs\globals_defs_f.html" />
+    <None Include="drivers\docs\globals_defs_h.html" />
+    <None Include="drivers\docs\globals_defs_i.html" />
+    <None Include="drivers\docs\globals_defs_l.html" />
+    <None Include="drivers\docs\globals_defs_m.html" />
+    <None Include="drivers\docs\globals_defs_n.html" />
+    <None Include="drivers\docs\globals_defs_p.html" />
+    <None Include="drivers\docs\globals_defs_q.html" />
+    <None Include="drivers\docs\globals_defs_s.html" />
+    <None Include="drivers\docs\globals_defs_t.html" />
+    <None Include="drivers\docs\globals_defs_u.html" />
+    <None Include="drivers\docs\globals_defs_v.html" />
+    <None Include="drivers\docs\globals_defs_x.html" />
+    <None Include="drivers\docs\globals_e.html" />
+    <None Include="drivers\docs\globals_enum.html" />
+    <None Include="drivers\docs\globals_eval.html" />
+    <None Include="drivers\docs\globals_f.html" />
+    <None Include="drivers\docs\globals_func.html" />
+    <None Include="drivers\docs\globals_func_c.html" />
+    <None Include="drivers\docs\globals_func_e.html" />
+    <None Include="drivers\docs\globals_func_f.html" />
+    <None Include="drivers\docs\globals_func_h.html" />
+    <None Include="drivers\docs\globals_func_i.html" />
+    <None Include="drivers\docs\globals_func_l.html" />
+    <None Include="drivers\docs\globals_func_m.html" />
+    <None Include="drivers\docs\globals_func_p.html" />
+    <None Include="drivers\docs\globals_func_r.html" />
+    <None Include="drivers\docs\globals_func_s.html" />
+    <None Include="drivers\docs\globals_func_t.html" />
+    <None Include="drivers\docs\globals_func_u.html" />
+    <None Include="drivers\docs\globals_func_v.html" />
+    <None Include="drivers\docs\globals_func_x.html" />
+    <None Include="drivers\docs\globals_h.html" />
+    <None Include="drivers\docs\globals_i.html" />
+    <None Include="drivers\docs\globals_l.html" />
+    <None Include="drivers\docs\globals_m.html" />
+    <None Include="drivers\docs\globals_n.html" />
+    <None Include="drivers\docs\globals_o.html" />
+    <None Include="drivers\docs\globals_p.html" />
+    <None Include="drivers\docs\globals_q.html" />
+    <None Include="drivers\docs\globals_r.html" />
+    <None Include="drivers\docs\globals_s.html" />
+    <None Include="drivers\docs\globals_t.html" />
+    <None Include="drivers\docs\globals_type.html" />
+    <None Include="drivers\docs\globals_u.html" />
+    <None Include="drivers\docs\globals_v.html" />
+    <None Include="drivers\docs\globals_vars.html" />
+    <None Include="drivers\docs\globals_x.html" />
+    <None Include="drivers\docs\graph_legend.html" />
+    <None Include="drivers\docs\group__ab__driver__basic__function.html" />
+    <None Include="drivers\docs\group__ab__driver__creation.html" />
+    <None Include="drivers\docs\group__ab__driver__implementation.html" />
+    <None Include="drivers\docs\group__cr_d_e_l_a_y.html" />
+    <None Include="drivers\docs\group__cr_q_u_e_u_e___r_e_c_e_i_v_e.html" />
+    <None Include="drivers\docs\group__cr_q_u_e_u_e___r_e_c_e_i_v_e___f_r_o_m___i_s_r.html" />
+    <None Include="drivers\docs\group__cr_q_u_e_u_e___s_e_n_d.html" />
+    <None Include="drivers\docs\group__cr_q_u_e_u_e___s_e_n_d___f_r_o_m___i_s_r.html" />
+    <None Include="drivers\docs\group__cr_s_t_a_r_t.html" />
+    <None Include="drivers\docs\group__display__7seg__driver.html" />
+    <None Include="drivers\docs\group__display__7seg__driver__creation.html" />
+    <None Include="drivers\docs\group__display__7seg__driver__function.html" />
+    <None Include="drivers\docs\group__fifo__group.html" />
+    <None Include="drivers\docs\group__hih8120__driver.html" />
+    <None Include="drivers\docs\group__hih8120__driver__config.html" />
+    <None Include="drivers\docs\group__hih8120__driver__creation.html" />
+    <None Include="drivers\docs\group__hih8120__driver__function.html" />
+    <None Include="drivers\docs\group__hih8120__driver__return__codes.html" />
+    <None Include="drivers\docs\group__led__driver.html" />
+    <None Include="drivers\docs\group__led__driver__basic__function.html" />
+    <None Include="drivers\docs\group__led__driver__creation.html" />
+    <None Include="drivers\docs\group__lora__advanced__function.html" />
+    <None Include="drivers\docs\group__lora__basic__function.html" />
+    <None Include="drivers\docs\group__lora__config.html" />
+    <None Include="drivers\docs\group__lora__creation.html" />
+    <None Include="drivers\docs\group__lora__driver.html" />
+    <None Include="drivers\docs\group__lora__driver__return__codes.html" />
+    <None Include="drivers\docs\group__lora__simple__function.html" />
+    <None Include="drivers\docs\group__mh__z19__driver.html" />
+    <None Include="drivers\docs\group__mh__z19__driver__advanced__function.html" />
+    <None Include="drivers\docs\group__mh__z19__driver__basic__function.html" />
+    <None Include="drivers\docs\group__mh__z19__driver__creation.html" />
+    <None Include="drivers\docs\group__mh__z19__driver__driver__return__codes.html" />
+    <None Include="drivers\docs\group__pc_task_get_handle.html" />
+    <None Include="drivers\docs\group__pc_task_get_name.html" />
+    <None Include="drivers\docs\group__pfleury__ic2master.html" />
+    <None Include="drivers\docs\group__rc__servo__basic__function.html" />
+    <None Include="drivers\docs\group__rc__servo__creation.html" />
+    <None Include="drivers\docs\group__rc__servo__driver.html" />
+    <None Include="drivers\docs\group__sen14262__driver.html" />
+    <None Include="drivers\docs\group__sen14262__driver__basic__function.html" />
+    <None Include="drivers\docs\group__sen14262__driver__creation.html" />
+    <None Include="drivers\docs\group__sen14262__driver__return__codes.html" />
+    <None Include="drivers\docs\group__sen14262__driver__structs.html" />
+    <None Include="drivers\docs\group__serial__driver.html" />
+    <None Include="drivers\docs\group__spi.html" />
+    <None Include="drivers\docs\group__spi__config.html" />
+    <None Include="drivers\docs\group__spi__function.html" />
+    <None Include="drivers\docs\group__spi__return__codes.html" />
+    <None Include="drivers\docs\group__sr501__driver.html" />
+    <None Include="drivers\docs\group__sr501__driver__basic__function.html" />
+    <None Include="drivers\docs\group__sr501__driver__creation.html" />
+    <None Include="drivers\docs\group__stdio__driver.html" />
+    <None Include="drivers\docs\group__stdio__driver__creation.html" />
+    <None Include="drivers\docs\group__stdio__driver__functions.html" />
+    <None Include="drivers\docs\group__task_d_i_s_a_b_l_e___i_n_t_e_r_r_u_p_t_s.html" />
+    <None Include="drivers\docs\group__task_e_n_a_b_l_e___i_n_t_e_r_r_u_p_t_s.html" />
+    <None Include="drivers\docs\group__task_e_n_t_e_r___c_r_i_t_i_c_a_l.html" />
+    <None Include="drivers\docs\group__task_e_x_i_t___c_r_i_t_i_c_a_l.html" />
+    <None Include="drivers\docs\group__task_y_i_e_l_d.html" />
+    <None Include="drivers\docs\group__tsl2591__driver.html" />
+    <None Include="drivers\docs\group__tsl2591__driver__advanced__function.html" />
+    <None Include="drivers\docs\group__tsl2591__driver__basic__function.html" />
+    <None Include="drivers\docs\group__tsl2591__driver__creation.html" />
+    <None Include="drivers\docs\group__tsl2591__driver__return__codes.html" />
+    <None Include="drivers\docs\group__tsl2591__driver__structs.html" />
+    <None Include="drivers\docs\group__ul_task_notify_take.html" />
+    <None Include="drivers\docs\group__ux_queue_messages_waiting.html" />
+    <None Include="drivers\docs\group__ux_task_get_number_of_tasks.html" />
+    <None Include="drivers\docs\group__ux_task_priority_get.html" />
+    <None Include="drivers\docs\group__v_co_routine_schedule.html" />
+    <None Include="drivers\docs\group__v_queue_delete.html" />
+    <None Include="drivers\docs\group__v_semaphore_create_binary.html" />
+    <None Include="drivers\docs\group__v_semaphore_delete.html" />
+    <None Include="drivers\docs\group__v_stream_buffer_delete.html" />
+    <None Include="drivers\docs\group__v_task_delay.html" />
+    <None Include="drivers\docs\group__v_task_delay_until.html" />
+    <None Include="drivers\docs\group__v_task_delete.html" />
+    <None Include="drivers\docs\group__v_task_end_scheduler.html" />
+    <None Include="drivers\docs\group__v_task_get_info.html" />
+    <None Include="drivers\docs\group__v_task_get_run_time_stats.html" />
+    <None Include="drivers\docs\group__v_task_list.html" />
+    <None Include="drivers\docs\group__v_task_priority_set.html" />
+    <None Include="drivers\docs\group__v_task_resume.html" />
+    <None Include="drivers\docs\group__v_task_resume_from_i_s_r.html" />
+    <None Include="drivers\docs\group__v_task_start_scheduler.html" />
+    <None Include="drivers\docs\group__v_task_suspend.html" />
+    <None Include="drivers\docs\group__v_task_suspend_all.html" />
+    <None Include="drivers\docs\group__x_co_routine_create.html" />
+    <None Include="drivers\docs\group__x_event_group_clear_bits.html" />
+    <None Include="drivers\docs\group__x_event_group_clear_bits_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_event_group_create.html" />
+    <None Include="drivers\docs\group__x_event_group_get_bits.html" />
+    <None Include="drivers\docs\group__x_event_group_get_bits_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_event_group_set_bits.html" />
+    <None Include="drivers\docs\group__x_event_group_set_bits_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_event_group_sync.html" />
+    <None Include="drivers\docs\group__x_event_group_wait_bits.html" />
+    <None Include="drivers\docs\group__x_message_buffer_create.html" />
+    <None Include="drivers\docs\group__x_message_buffer_create_static.html" />
+    <None Include="drivers\docs\group__x_message_buffer_next_length_bytes.html" />
+    <None Include="drivers\docs\group__x_message_buffer_receive.html" />
+    <None Include="drivers\docs\group__x_message_buffer_receive_completed_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_message_buffer_receive_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_message_buffer_reset.html" />
+    <None Include="drivers\docs\group__x_message_buffer_send.html" />
+    <None Include="drivers\docs\group__x_message_buffer_send_completed_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_message_buffer_send_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_message_buffer_space_available.html" />
+    <None Include="drivers\docs\group__x_queue_create.html" />
+    <None Include="drivers\docs\group__x_queue_create_static.html" />
+    <None Include="drivers\docs\group__x_queue_overwrite.html" />
+    <None Include="drivers\docs\group__x_queue_overwrite_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_queue_peek.html" />
+    <None Include="drivers\docs\group__x_queue_peek_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_queue_receive.html" />
+    <None Include="drivers\docs\group__x_queue_receive_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_queue_send.html" />
+    <None Include="drivers\docs\group__x_queue_send_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_binary.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_binary_static.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_counting.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_counting_static.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_mutex.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_mutex_static.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_recursive_mutex.html" />
+    <None Include="drivers\docs\group__x_semaphore_create_recursive_mutex_static.html" />
+    <None Include="drivers\docs\group__x_semaphore_give.html" />
+    <None Include="drivers\docs\group__x_semaphore_give_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_semaphore_give_recursive.html" />
+    <None Include="drivers\docs\group__x_semaphore_take.html" />
+    <None Include="drivers\docs\group__x_semaphore_take_recursive.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_bytes_available.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_create.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_create_static.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_is_empty.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_is_full.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_receive.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_receive_completed_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_receive_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_reset.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_send.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_send_completed_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_send_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_set_trigger_level.html" />
+    <None Include="drivers\docs\group__x_stream_buffer_spaces_available.html" />
+    <None Include="drivers\docs\group__x_task_abort_delay.html" />
+    <None Include="drivers\docs\group__x_task_create.html" />
+    <None Include="drivers\docs\group__x_task_create_restricted.html" />
+    <None Include="drivers\docs\group__x_task_create_restricted_static.html" />
+    <None Include="drivers\docs\group__x_task_create_static.html" />
+    <None Include="drivers\docs\group__x_task_get_idle_run_time_counter.html" />
+    <None Include="drivers\docs\group__x_task_get_tick_count.html" />
+    <None Include="drivers\docs\group__x_task_get_tick_count_from_i_s_r.html" />
+    <None Include="drivers\docs\group__x_task_notify.html" />
+    <None Include="drivers\docs\group__x_task_notify_give.html" />
+    <None Include="drivers\docs\group__x_task_notify_state_clear.html" />
+    <None Include="drivers\docs\group__x_task_notify_wait.html" />
+    <None Include="drivers\docs\group__x_task_resume_all.html" />
+    <None Include="drivers\docs\group___a_b-_incremental.html" />
+    <None Include="drivers\docs\group___event_group.html" />
+    <None Include="drivers\docs\group___event_group_handle__t.html" />
+    <None Include="drivers\docs\group___l6203.html" />
+    <None Include="drivers\docs\group___l6203__driver__basic__function.html" />
+    <None Include="drivers\docs\group___l6203__driver__creation.html" />
+    <None Include="drivers\docs\group___l6203__driver__implementation.html" />
+    <None Include="drivers\docs\group___task_handle__t.html" />
+    <None Include="drivers\docs\group___v_n_h7100_a_s.html" />
+    <None Include="drivers\docs\group___v_n_h7100_a_s__driver__basic__function.html" />
+    <None Include="drivers\docs\group___v_n_h7100_a_s__driver__creation.html" />
+    <None Include="drivers\docs\group___v_n_h7100_a_s__driver__implementation.html" />
+    <None Include="drivers\docs\hal_8c.html" />
+    <None Include="drivers\docs\hal__defs_8h.html" />
+    <None Include="drivers\docs\hal__defs_8h_source.html" />
+    <None Include="drivers\docs\hcsr501_8h.html" />
+    <None Include="drivers\docs\hcsr501_8h_source.html" />
+    <None Include="drivers\docs\hc_sr501_8h.html" />
+    <None Include="drivers\docs\hc_sr501_8h_source.html" />
+    <None Include="drivers\docs\heap__3_8c.html" />
+    <None Include="drivers\docs\hih8120_8c.html" />
+    <None Include="drivers\docs\hih8120_8h.html" />
+    <None Include="drivers\docs\hih8120_8h_source.html" />
+    <None Include="drivers\docs\hih8120_driver_quickstart.html" />
+    <None Include="drivers\docs\i2cmaster_8h.html" />
+    <None Include="drivers\docs\i2cmaster_8h_source.html" />
+    <None Include="drivers\docs\ihal_8h.html" />
+    <None Include="drivers\docs\ihal_8h_source.html" />
+    <None Include="drivers\docs\iled_8h.html" />
+    <None Include="drivers\docs\iled_8h_source.html" />
+    <None Include="drivers\docs\index.html" />
+    <None Include="drivers\docs\i__register__access_8h.html" />
+    <None Include="drivers\docs\i__register__access_8h_source.html" />
+    <None Include="drivers\docs\l6203_8h.html" />
+    <None Include="drivers\docs\l6203_8h_source.html" />
+    <None Include="drivers\docs\led_8c.html" />
+    <None Include="drivers\docs\list_8c.html" />
+    <None Include="drivers\docs\list_8h.html" />
+    <None Include="drivers\docs\list_8h_source.html" />
+    <None Include="drivers\docs\lorawan__config_8h.html" />
+    <None Include="drivers\docs\lorawan__config_8h_source.html" />
+    <None Include="drivers\docs\lora_driver_quickstart.html" />
+    <None Include="drivers\docs\lora_perform_co2_meassuring.html" />
+    <None Include="drivers\docs\lora_receive_downlink_message.html" />
+    <None Include="drivers\docs\lora_send_uplink_message.html" />
+    <None Include="drivers\docs\lora_setup_to__a_b_p.html" />
+    <None Include="drivers\docs\lora_setup_to__o_t_a_a.html" />
+    <None Include="drivers\docs\lora_use_case_1.html" />
+    <None Include="drivers\docs\lora__driver_8c.html" />
+    <None Include="drivers\docs\lora__driver_8h.html" />
+    <None Include="drivers\docs\lora__driver_8h_source.html" />
+    <None Include="drivers\docs\lora__driver__utils_8h.html" />
+    <None Include="drivers\docs\lora__driver__utils_8h_source.html" />
+    <None Include="drivers\docs\lora__handler_8c.html" />
+    <None Include="drivers\docs\lora__handler_8h.html" />
+    <None Include="drivers\docs\lora__handler_8h_source.html" />
+    <None Include="drivers\docs\main_8c.html" />
+    <None Include="drivers\docs\main__rn2483__test_8c.html" />
+    <None Include="drivers\docs\mega__register__access_8c.html" />
+    <None Include="drivers\docs\message__buffer_8h.html" />
+    <None Include="drivers\docs\message__buffer_8h_source.html" />
+    <None Include="drivers\docs\mh_z19_driver_quick_start.html" />
+    <None Include="drivers\docs\mh__z19_8h.html" />
+    <None Include="drivers\docs\mh__z19_8h_source.html" />
+    <None Include="drivers\docs\modules.html" />
+    <None Include="drivers\docs\mpu__wrappers_8h.html" />
+    <None Include="drivers\docs\mpu__wrappers_8h_source.html" />
+    <None Include="drivers\docs\pages.html" />
+    <None Include="drivers\docs\portable_8h.html" />
+    <None Include="drivers\docs\portable_8h_source.html" />
+    <None Include="drivers\docs\portmacro_8h.html" />
+    <None Include="drivers\docs\portmacro_8h_source.html" />
+    <None Include="drivers\docs\port_8c.html" />
+    <None Include="drivers\docs\projdefs_8h.html" />
+    <None Include="drivers\docs\projdefs_8h_source.html" />
+    <None Include="drivers\docs\queue_8c.html" />
+    <None Include="drivers\docs\queue_8h.html" />
+    <None Include="drivers\docs\queue_8h_source.html" />
+    <None Include="drivers\docs\rc_servo_8h.html" />
+    <None Include="drivers\docs\rc_servo_8h_source.html" />
+    <None Include="drivers\docs\rc__servo_8h.html" />
+    <None Include="drivers\docs\rc__servo_8h_source.html" />
+    <None Include="drivers\docs\register__access_8h.html" />
+    <None Include="drivers\docs\register__access_8h_source.html" />
+    <None Include="drivers\docs\rn2483_8c.html" />
+    <None Include="drivers\docs\rn2483_8h.html" />
+    <None Include="drivers\docs\rn2483_8h_source.html" />
+    <None Include="drivers\docs\search\all_0.html" />
+    <None Include="drivers\docs\search\all_1.html" />
+    <None Include="drivers\docs\search\all_10.html" />
+    <None Include="drivers\docs\search\all_11.html" />
+    <None Include="drivers\docs\search\all_12.html" />
+    <None Include="drivers\docs\search\all_13.html" />
+    <None Include="drivers\docs\search\all_14.html" />
+    <None Include="drivers\docs\search\all_2.html" />
+    <None Include="drivers\docs\search\all_3.html" />
+    <None Include="drivers\docs\search\all_4.html" />
+    <None Include="drivers\docs\search\all_5.html" />
+    <None Include="drivers\docs\search\all_6.html" />
+    <None Include="drivers\docs\search\all_7.html" />
+    <None Include="drivers\docs\search\all_8.html" />
+    <None Include="drivers\docs\search\all_9.html" />
+    <None Include="drivers\docs\search\all_a.html" />
+    <None Include="drivers\docs\search\all_b.html" />
+    <None Include="drivers\docs\search\all_c.html" />
+    <None Include="drivers\docs\search\all_d.html" />
+    <None Include="drivers\docs\search\all_e.html" />
+    <None Include="drivers\docs\search\all_f.html" />
+    <None Include="drivers\docs\search\classes_0.html" />
+    <None Include="drivers\docs\search\classes_1.html" />
+    <None Include="drivers\docs\search\classes_2.html" />
+    <None Include="drivers\docs\search\classes_3.html" />
+    <None Include="drivers\docs\search\classes_4.html" />
+    <None Include="drivers\docs\search\classes_5.html" />
+    <None Include="drivers\docs\search\classes_6.html" />
+    <None Include="drivers\docs\search\defines_0.html" />
+    <None Include="drivers\docs\search\defines_1.html" />
+    <None Include="drivers\docs\search\defines_2.html" />
+    <None Include="drivers\docs\search\defines_3.html" />
+    <None Include="drivers\docs\search\defines_4.html" />
+    <None Include="drivers\docs\search\defines_5.html" />
+    <None Include="drivers\docs\search\defines_6.html" />
+    <None Include="drivers\docs\search\defines_7.html" />
+    <None Include="drivers\docs\search\defines_8.html" />
+    <None Include="drivers\docs\search\defines_9.html" />
+    <None Include="drivers\docs\search\defines_a.html" />
+    <None Include="drivers\docs\search\defines_b.html" />
+    <None Include="drivers\docs\search\defines_c.html" />
+    <None Include="drivers\docs\search\defines_d.html" />
+    <None Include="drivers\docs\search\defines_e.html" />
+    <None Include="drivers\docs\search\enums_0.html" />
+    <None Include="drivers\docs\search\enums_1.html" />
+    <None Include="drivers\docs\search\enums_2.html" />
+    <None Include="drivers\docs\search\enums_3.html" />
+    <None Include="drivers\docs\search\enums_4.html" />
+    <None Include="drivers\docs\search\enumvalues_0.html" />
+    <None Include="drivers\docs\search\enumvalues_1.html" />
+    <None Include="drivers\docs\search\enumvalues_2.html" />
+    <None Include="drivers\docs\search\enumvalues_3.html" />
+    <None Include="drivers\docs\search\enumvalues_4.html" />
+    <None Include="drivers\docs\search\enumvalues_5.html" />
+    <None Include="drivers\docs\search\enumvalues_6.html" />
+    <None Include="drivers\docs\search\enumvalues_7.html" />
+    <None Include="drivers\docs\search\enumvalues_8.html" />
+    <None Include="drivers\docs\search\files_0.html" />
+    <None Include="drivers\docs\search\files_1.html" />
+    <None Include="drivers\docs\search\files_2.html" />
+    <None Include="drivers\docs\search\files_3.html" />
+    <None Include="drivers\docs\search\files_4.html" />
+    <None Include="drivers\docs\search\files_5.html" />
+    <None Include="drivers\docs\search\files_6.html" />
+    <None Include="drivers\docs\search\files_7.html" />
+    <None Include="drivers\docs\search\files_8.html" />
+    <None Include="drivers\docs\search\files_9.html" />
+    <None Include="drivers\docs\search\files_a.html" />
+    <None Include="drivers\docs\search\files_b.html" />
+    <None Include="drivers\docs\search\files_c.html" />
+    <None Include="drivers\docs\search\files_d.html" />
+    <None Include="drivers\docs\search\functions_0.html" />
+    <None Include="drivers\docs\search\functions_1.html" />
+    <None Include="drivers\docs\search\functions_2.html" />
+    <None Include="drivers\docs\search\functions_3.html" />
+    <None Include="drivers\docs\search\functions_4.html" />
+    <None Include="drivers\docs\search\functions_5.html" />
+    <None Include="drivers\docs\search\functions_6.html" />
+    <None Include="drivers\docs\search\functions_7.html" />
+    <None Include="drivers\docs\search\functions_8.html" />
+    <None Include="drivers\docs\search\functions_9.html" />
+    <None Include="drivers\docs\search\functions_a.html" />
+    <None Include="drivers\docs\search\functions_b.html" />
+    <None Include="drivers\docs\search\functions_c.html" />
+    <None Include="drivers\docs\search\functions_d.html" />
+    <None Include="drivers\docs\search\groups_0.html" />
+    <None Include="drivers\docs\search\groups_1.html" />
+    <None Include="drivers\docs\search\groups_2.html" />
+    <None Include="drivers\docs\search\groups_3.html" />
+    <None Include="drivers\docs\search\groups_4.html" />
+    <None Include="drivers\docs\search\groups_5.html" />
+    <None Include="drivers\docs\search\groups_6.html" />
+    <None Include="drivers\docs\search\groups_7.html" />
+    <None Include="drivers\docs\search\groups_8.html" />
+    <None Include="drivers\docs\search\groups_9.html" />
+    <None Include="drivers\docs\search\groups_a.html" />
+    <None Include="drivers\docs\search\groups_b.html" />
+    <None Include="drivers\docs\search\groups_c.html" />
+    <None Include="drivers\docs\search\groups_d.html" />
+    <None Include="drivers\docs\search\groups_e.html" />
+    <None Include="drivers\docs\search\nomatches.html" />
+    <None Include="drivers\docs\search\pages_0.html" />
+    <None Include="drivers\docs\search\pages_1.html" />
+    <None Include="drivers\docs\search\pages_2.html" />
+    <None Include="drivers\docs\search\pages_3.html" />
+    <None Include="drivers\docs\search\pages_4.html" />
+    <None Include="drivers\docs\search\pages_5.html" />
+    <None Include="drivers\docs\search\pages_6.html" />
+    <None Include="drivers\docs\search\pages_7.html" />
+    <None Include="drivers\docs\search\typedefs_0.html" />
+    <None Include="drivers\docs\search\typedefs_1.html" />
+    <None Include="drivers\docs\search\typedefs_2.html" />
+    <None Include="drivers\docs\search\typedefs_3.html" />
+    <None Include="drivers\docs\search\typedefs_4.html" />
+    <None Include="drivers\docs\search\typedefs_5.html" />
+    <None Include="drivers\docs\search\typedefs_6.html" />
+    <None Include="drivers\docs\search\typedefs_7.html" />
+    <None Include="drivers\docs\search\typedefs_8.html" />
+    <None Include="drivers\docs\search\typedefs_9.html" />
+    <None Include="drivers\docs\search\typedefs_a.html" />
+    <None Include="drivers\docs\search\typedefs_b.html" />
+    <None Include="drivers\docs\search\typedefs_c.html" />
+    <None Include="drivers\docs\search\typedefs_d.html" />
+    <None Include="drivers\docs\search\variables_0.html" />
+    <None Include="drivers\docs\search\variables_1.html" />
+    <None Include="drivers\docs\search\variables_2.html" />
+    <None Include="drivers\docs\search\variables_3.html" />
+    <None Include="drivers\docs\search\variables_4.html" />
+    <None Include="drivers\docs\search\variables_5.html" />
+    <None Include="drivers\docs\search\variables_6.html" />
+    <None Include="drivers\docs\search\variables_7.html" />
+    <None Include="drivers\docs\search\variables_8.html" />
+    <None Include="drivers\docs\search\variables_9.html" />
+    <None Include="drivers\docs\search\variables_a.html" />
+    <None Include="drivers\docs\search\variables_b.html" />
+    <None Include="drivers\docs\search\variables_c.html" />
+    <None Include="drivers\docs\search\variables_d.html" />
+    <None Include="drivers\docs\search\variables_e.html" />
+    <None Include="drivers\docs\search\variables_f.html" />
+    <None Include="drivers\docs\semphr_8h.html" />
+    <None Include="drivers\docs\semphr_8h_source.html" />
+    <None Include="drivers\docs\sen14262_8h.html" />
+    <None Include="drivers\docs\sen14262_8h_source.html" />
+    <None Include="drivers\docs\sen14262_driver_quick_start.html" />
+    <None Include="drivers\docs\serial_8c.html" />
+    <None Include="drivers\docs\serial_8h.html" />
+    <None Include="drivers\docs\serial_8h_source.html" />
+    <None Include="drivers\docs\serial__task_8c.html" />
+    <None Include="drivers\docs\spi__iha_8h.html" />
+    <None Include="drivers\docs\spi__iha_8h_source.html" />
+    <None Include="drivers\docs\sr501_driver_quick_start.html" />
+    <None Include="drivers\docs\stack__macros_8h.html" />
+    <None Include="drivers\docs\stack__macros_8h_source.html" />
+    <None Include="drivers\docs\status__leds_8h.html" />
+    <None Include="drivers\docs\status__leds_8h_source.html" />
+    <None Include="drivers\docs\stdio__driver_8c.html" />
+    <None Include="drivers\docs\stdio__driver_8h.html" />
+    <None Include="drivers\docs\stdio__driver_8h_source.html" />
+    <None Include="drivers\docs\stream__buffer_8c.html" />
+    <None Include="drivers\docs\stream__buffer_8h.html" />
+    <None Include="drivers\docs\stream__buffer_8h_source.html" />
+    <None Include="drivers\docs\structcor_co_routine_control_block.html" />
+    <None Include="drivers\docs\structfifo__desc.html" />
+    <None Include="drivers\docs\structhal__register_access__t.html" />
+    <None Include="drivers\docs\structhal__register__access__t.html" />
+    <None Include="drivers\docs\structlora__driver__payload.html" />
+    <None Include="drivers\docs\structlora__payload.html" />
+    <None Include="drivers\docs\structserial__data__t.html" />
+    <None Include="drivers\docs\structtsl2591_combined_data__t.html" />
+    <None Include="drivers\docs\structtsl2591__combined_data__t.html" />
+    <None Include="drivers\docs\structx_l_i_s_t.html" />
+    <None Include="drivers\docs\structx_l_i_s_t___i_t_e_m.html" />
+    <None Include="drivers\docs\structx_m_e_m_o_r_y___r_e_g_i_o_n.html" />
+    <None Include="drivers\docs\structx_m_i_n_i___l_i_s_t___i_t_e_m.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___e_v_e_n_t___g_r_o_u_p.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___l_i_s_t.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___l_i_s_t___i_t_e_m.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___m_i_n_i___l_i_s_t___i_t_e_m.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___q_u_e_u_e.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___s_t_r_e_a_m___b_u_f_f_e_r.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___t_c_b.html" />
+    <None Include="drivers\docs\structx_s_t_a_t_i_c___t_i_m_e_r.html" />
+    <None Include="drivers\docs\structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s.html" />
+    <None Include="drivers\docs\structx_t_a_s_k___s_t_a_t_u_s.html" />
+    <None Include="drivers\docs\structx_t_i_m_e___o_u_t.html" />
+    <None Include="drivers\docs\struct_heap_region.html" />
+    <None Include="drivers\docs\tasks_8c.html" />
+    <None Include="drivers\docs\task_8h.html" />
+    <None Include="drivers\docs\task_8h_source.html" />
+    <None Include="drivers\docs\timers_8c.html" />
+    <None Include="drivers\docs\timers_8h.html" />
+    <None Include="drivers\docs\timers_8h_source.html" />
+    <None Include="drivers\docs\todo.html" />
+    <None Include="drivers\docs\tsl2591_8h.html" />
+    <None Include="drivers\docs\tsl2591_8h_source.html" />
+    <None Include="drivers\docs\tsl2591_driver_quick_start.html" />
+    <None Include="drivers\docs\twimaster_8c.html" />
+    <None Include="drivers\docs\twi_8h.html" />
+    <None Include="drivers\docs\twi_8h_source.html" />
+    <None Include="drivers\docs\variant_hooks_8c.html" />
+    <None Include="drivers\docs\vnh7100as_8h.html" />
+    <None Include="drivers\docs\vnh7100as_8h_source.html" />
+    <None Include="drivers\docs\_a_t_m_e_g_a2560___free_r_t_o_s_8h.html" />
+    <None Include="drivers\docs\_a_t_m_e_g_a2560___free_r_t_o_s_8h_source.html" />
+    <None Include="drivers\docs\_a_t_m_e_g_a___free_r_t_o_s_8h.html" />
+    <None Include="drivers\docs\_a_t_m_e_g_a___free_r_t_o_s_8h_source.html" />
+    <None Include="drivers\docs\_doxygen_main_page_8dox.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_config_8h.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_config_8h_source.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_trace_driver_8h.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_trace_driver_8h_source.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_variant_8h.html" />
+    <None Include="drivers\docs\_free_r_t_o_s_variant_8h_source.html" />
+    <None Include="drivers\docs\_l6203_8h.html" />
+    <None Include="drivers\docs\_l6203_8h_source.html" />
+    <None Include="drivers\docs\_l6203_driver_implementation.html" />
+    <None Include="drivers\docs\_license.html" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="co2.h" />
+    <ClInclude Include="drivers\display_7seg.h" />
+    <ClInclude Include="drivers\fifo.h" />
+    <ClInclude Include="drivers\FreeRTOSTraceDriver.h" />
+    <ClInclude Include="drivers\hal_defs.h" />
+    <ClInclude Include="drivers\hcSr501.h" />
+    <ClInclude Include="drivers\hih8120.h" />
+    <ClInclude Include="drivers\ihal.h" />
+    <ClInclude Include="drivers\iled.h" />
+    <ClInclude Include="drivers\i_register_access.h" />
+    <ClInclude Include="drivers\lora_driver.h" />
+    <ClInclude Include="drivers\lora_driver_utils.h" />
+    <ClInclude Include="drivers\mh_z19.h" />
+    <ClInclude Include="drivers\rcServo.h" />
+    <ClInclude Include="drivers\rc_servo.h" />
+    <ClInclude Include="drivers\register_access.h" />
+    <ClInclude Include="drivers\sen14262.h" />
+    <ClInclude Include="drivers\serial.h" />
+    <ClInclude Include="drivers\spi_iha.h" />
+    <ClInclude Include="drivers\status_leds.h" />
+    <ClInclude Include="drivers\stdio_driver.h" />
+    <ClInclude Include="drivers\tsl2591.h" />
+    <ClInclude Include="drivers\twi.h" />
+    <ClInclude Include="pir_sensor.h" />
+    <ClInclude Include="temp_hum_sensor.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>X64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets'))" />
+  </Target>
+</Project>
