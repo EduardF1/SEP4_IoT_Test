@@ -157,6 +157,7 @@ TEST_F(CO2_Test, Test_CO2_measure_is_called_10_times) {
 
 TEST_F(CO2_Test, Test_CO2_set_data_is_called) {
 	//	Arrange
+
 	//	Act
 	co2_getLatestMeasurement();
 	co2_getLastCO2ppm();
