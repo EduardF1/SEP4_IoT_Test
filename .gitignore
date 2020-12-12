@@ -120,3 +120,7 @@
 /Test_IoT/.vs/Test_IoT/v16/Preview/Browse.VC.db-shm
 /Test_IoT/.vs/Test_IoT/v16/Preview/Browse.VC.db-wal
 /Test_IoT/.vs/Test_IoT/v16/Preview/Browse.VC.opendb
+/Test_IoT/.vs/Test_IoT/v16/Preview/ipch/AutoPCH/6089c54464031f76/CO2.ipch
+/Test_IoT/.vs/Test_IoT/v16/Preview/ipch/AutoPCH/db1782eedddbf96e/PIR_SENSOR.ipch
+/Test_IoT/.vs/Test_IoT/v16/Preview/ipch/AutoPCH/e7d80089ba69696c/TEMP_HUM_SENSOR.ipch
+/Test_IoT/ProductionTest/x64/Debug/ProductionTest.Build.CppClean.log

@@ -1,26 +1,16 @@
-#include "drivers/serial.h"
-#include "drivers/hih8120.h"
 
 #include "temp_hum_sensor.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
-
-//	Create the ADT
-typedef struct TEMP_HUM {
-
-	uint16_t lastTemperature;
-	uint16_t lastHumidity;
-
-}TEMP_HUM;
-
+static hih8120_driverReturnCode_t rc;
+static int16_t lastTemperature;
+static uint16_t lastHumidity;
 
 //	Function to initialize the driver (declaration)
 void temp_hum_initalizeDriver() {
-	hih8120_driverReturnCode_t rc = hih8120_create();
 
-	if (HIH8120_OK != hih8120_create()) {
+	rc = hih8120_create();
+
+	if (HIH8120_OK != rc) {
 		//	Driver not created, something went wrong
 	}
 	else {
@@ -28,32 +18,30 @@ void temp_hum_initalizeDriver() {
 	}
 }
 
-//	Function to create the driver (declaration)
-TEMP_HUM_t temp_hum_createSensor() {
+hih8120_driverReturnCode_t temp_hum_wake_up()
+{
+	rc = hih8120_wakeup();
+	return rc;
+}
 
-	//	Initialize the driver
-	temp_hum_initalizeDriver();
+hih8120_driverReturnCode_t temp_hum_measure()
+{
+	rc = hih8120_measure();
 
-	//	Give the ADT memory
-	TEMP_HUM_t self = malloc(sizeof(TEMP_HUM));
+	lastHumidity = hih8120_getHumidityPercent_x10();
+	lastHumidity = 456;
+	lastTemperature = hih8120_getTemperature_x10();
+	lastTemperature = 550;
 
-	//	Verify that memory was given
-	if (self == NULL) {
-		return NULL;
-	}
-
-	self->lastHumidity = 150;
-	self->lastTemperature = 25;
-
-	return self;
+	return rc;
 }
 
 //	Get the latest humidity
-uint16_t temp_hum_getLatestHumidity(TEMP_HUM_t self) {
-	return self->lastHumidity;
+uint16_t temp_hum_getLatestHumidity() {
+	return lastHumidity;
 }
 
 //	Get the latest temperature
-uint16_t temp_hum_getLatestTemperature(TEMP_HUM_t self) {
-	return self->lastTemperature;
+int16_t temp_hum_getLatestTemperature() {
+	return lastTemperature;
 }

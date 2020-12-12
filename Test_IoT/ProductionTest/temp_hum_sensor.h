@@ -1,18 +1,21 @@
 #pragma once
 
+#include "drivers/serial.h"
+#include "drivers/hih8120.h"
 #include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-//	Pointer variable to a TEMP_HUM ADT
-typedef struct TEMP_HUM* TEMP_HUM_t;
 
 //	Function to initialize the driver
 void temp_hum_initalizeDriver();
 
-//	Function to create the driver
-TEMP_HUM_t temp_hum_createSensor();
+hih8120_driverReturnCode_t temp_hum_wake_up();
+
+hih8120_driverReturnCode_t temp_hum_measure();
 
 //	Function to return the last measured humidity
-uint16_t temp_hum_getLatestHumidity(TEMP_HUM_t self);
+uint16_t temp_hum_getLatestHumidity();
 
 //	Function to return the last measured temperature
-uint16_t temp_hum_getLatestTemperature(TEMP_HUM_t self);
+int16_t temp_hum_getLatestTemperature();

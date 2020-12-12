@@ -9,7 +9,6 @@ extern "C"
 #include "drivers/mh_z19.h"
 #include "drivers/serial.h"
 #include "drivers/hcSr501.h"
-
 #include "temp_hum_sensor.h"
 #include "co2.h"
 #include "pir_sensor.h"
@@ -35,6 +34,8 @@ extern "C"
 //	Fake function to create the PIR Sensor
 FAKE_VALUE_FUNC(hcsr501_p, hcsr501_create, volatile uint8_t*, uint8_t);
 
+FAKE_VALUE_FUNC(bool, hcsr501_isDetecting, hcsr501_p);
+
 class PIR_Test : public ::testing::Test
 {
 protected:
@@ -56,14 +57,20 @@ protected:
 //	Fake function to create the Temp_Hum Sensor
 FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_create);
 
+FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_wakeup);
+
+FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_measure);
+
+FAKE_VALUE_FUNC(uint16_t, hih8120_getHumidityPercent_x10);
+
+FAKE_VALUE_FUNC(int16_t, hih8120_getTemperature_x10);
+
 
 class Temp_Hum_Test : public ::testing::Test
 {
 protected:
-	TEMP_HUM_t TEMP_HUM_Sensor;
 	void SetUp() override
 	{
-		TEMP_HUM_Sensor = temp_hum_createSensor();
 		RESET_FAKE(hih8120_create);
 		FFF_RESET_HISTORY();
 	}
@@ -88,9 +95,7 @@ FAKE_VALUE_FUNC(mh_z19_returnCode_t, mh_z19_getCo2Ppm, uint16_t*);
 class CO2_Test : public ::testing::Test
 {
 protected:
-	CO2_t CO2_Sensor;
 	void SetUp() override {
-		CO2_Sensor = co2_createSensor();
 		RESET_FAKE(mh_z19_takeMeassuring);
 		RESET_FAKE(mh_z19_getCo2Ppm);
 		FFF_RESET_HISTORY();
@@ -108,24 +113,24 @@ TEST_F(Temp_Hum_Test, Test_Temp_Hum_initialize_driver_is_called) {
 	temp_hum_initalizeDriver();
 
 	//	Assert
-	ASSERT_EQ(2, hih8120_create_fake.call_count);
+	ASSERT_EQ(1, hih8120_create_fake.call_count);
+	ASSERT_TRUE(0 == hih8120_create_fake.return_val);
 }
 
 TEST_F(Temp_Hum_Test, Test_Temp_Hum_Create_driver_and_get_temperature_humidity) {
 	//	Arrange
 	hih8120_create();
-	int temp_latestHumidity = 0;
-	int temp_latestTemperature = 0;
 
 	//	Act
-	temp_latestHumidity = temp_hum_getLatestHumidity(TEMP_HUM_Sensor);
-	temp_latestTemperature = temp_hum_getLatestTemperature(TEMP_HUM_Sensor);
+	int16_t lastTemperature = temp_hum_getLatestTemperature();
+	uint16_t lastHumidity = temp_hum_getLatestHumidity();
 
 	//	Assert
 	EXPECT_TRUE(1 == hih8120_create_fake.call_count);
-	ASSERT_TRUE(NULL != TEMP_HUM_Sensor);
-	ASSERT_TRUE(temp_latestHumidity == 150);
-	EXPECT_TRUE(temp_latestTemperature == 25);
+	ASSERT_TRUE(0 == temp_hum_wake_up());
+	ASSERT_TRUE(0 == temp_hum_measure());
+	ASSERT_FALSE(lastTemperature == temp_hum_getLatestHumidity());
+	ASSERT_FALSE(lastHumidity == temp_hum_getLatestTemperature());
 }
 
 
@@ -133,9 +138,8 @@ TEST_F(CO2_Test, Test_CO2_create_and_get_CO2_value) {
 	//	Arrange
 	int co2ppm;
 	//	Act
-	co2ppm = co2_getLastCO2ppm(CO2_Sensor);
+	co2ppm = co2_getLastCO2ppm();
 	//	Assert
-	EXPECT_TRUE(NULL != CO2_Sensor);
 	EXPECT_EQ(0, co2ppm);
 }
 
@@ -154,10 +158,13 @@ TEST_F(CO2_Test, Test_CO2_measure_is_called_10_times) {
 TEST_F(CO2_Test, Test_CO2_set_data_is_called) {
 	//	Arrange
 	//	Act
-	co2_getLatestMeasurement(CO2_Sensor);
+	co2_getLatestMeasurement();
+	co2_getLastCO2ppm();
 
 	//	Assert
 	ASSERT_TRUE(mh_z19_getCo2Ppm_fake.call_count == 1);
+	EXPECT_TRUE(0 == mh_z19_getCo2Ppm_fake.return_val);
+	ASSERT_TRUE(1500 == co2_getLastCO2ppm());
 }
 
 
@@ -165,7 +172,22 @@ TEST_F(PIR_Test, Test_PIR_sensor_is_created) {
 	//	Arrange
 	//	Act
 	pir_createSensor();
+	hcsr501_p instance = get_pir_instance();
 
 	//	Assert
 	EXPECT_TRUE(hcsr501_create_fake.call_count == 1);
+	ASSERT_TRUE(instance == get_pir_instance());
+}
+
+TEST_F(PIR_Test, Test_PIR_sensor_is_detecting) {
+	//	Arrange
+	//	Act
+	pir_createSensor();
+	hcsr501_p instance = get_pir_instance();
+
+	//	Assert
+	//EXPECT_FALSE(hcsr501_isDetecting_fake.return_val);
+	ASSERT_FALSE(hcsr501_isDetecting(instance));
+	//ASSERT_FALSE(isDetecting(instance));
+	ASSERT_TRUE(0 == pir_sensor_getPeopleCount());
 }
