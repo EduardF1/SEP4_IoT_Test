@@ -42,7 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="co2.c" />
-    <ClCompile Include="pir_sensor.c" />
     <ClCompile Include="temp_hum_sensor.c" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
@@ -684,7 +683,6 @@
     <ClInclude Include="drivers\stdio_driver.h" />
     <ClInclude Include="drivers\tsl2591.h" />
     <ClInclude Include="drivers\twi.h" />
-    <ClInclude Include="pir_sensor.h" />
     <ClInclude Include="temp_hum_sensor.h" />
   </ItemGroup>
   <ItemDefinitionGroup />

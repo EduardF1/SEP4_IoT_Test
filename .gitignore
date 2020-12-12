@@ -131,3 +131,5 @@
 /Test_IoT/ProductionTest/x64/Debug/ProductionTest.tlog/ProductionTest.read.1u.tlog
 /Test_IoT/ProductionTest/x64/Debug/ProductionTest.tlog/ProductionTest.write.1u.tlog
 /Test_IoT/ProductionTest/ProductionTest.vcxproj
+/Test_IoT/.vs/Test_IoT/v16/Preview/ipch/AutoPCH/1aed10658d1e510f/MAIN.ipch
+/Test_IoT/.vs/Test_IoT/v16/Preview/ipch/AutoPCH/7d56186c12a84d8/LORA_PAYLOAD.ipch
