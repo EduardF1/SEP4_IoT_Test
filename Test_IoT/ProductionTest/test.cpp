@@ -8,7 +8,6 @@ extern "C"
 #include "drivers/hih8120.h"
 #include "drivers/mh_z19.h"
 #include "drivers/serial.h"
-#include "drivers/hcSr501.h"
 #include "temp_hum_sensor.h"
 #include "co2.h"
 
@@ -59,16 +58,16 @@ protected:
 	}
 };
 
+
+/// <summary>
+/// CO2 SENSOR TEST SUITE
+/// </summary>
+
 //	Fake function to take a measuring from the CO2 Sensor
 FAKE_VALUE_FUNC(mh_z19_returnCode_t, mh_z19_takeMeassuring);
 
 //	Fake function to get the CO2 value from the CO2 Sensor
 FAKE_VALUE_FUNC(mh_z19_returnCode_t, mh_z19_getCo2Ppm, uint16_t*);
-
-
-/// <summary>
-/// CO2 SENSOR TEST SUITE
-/// </summary>
 
 class CO2_Test : public ::testing::Test
 {
