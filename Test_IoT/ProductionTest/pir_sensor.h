@@ -12,4 +12,5 @@ bool isDetecting(hcsr501_p hcsr501_instance);
 //	Function to return the number of people (detections of the sensor)
 uint16_t pir_sensor_getPeopleCount();
 
+//	Function to return the driver instance
 hcsr501_p get_pir_instance();

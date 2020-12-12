@@ -18,12 +18,14 @@ void temp_hum_initalizeDriver() {
 	}
 }
 
+//	Function to wake up the driver (declaration)
 hih8120_driverReturnCode_t temp_hum_wake_up()
 {
 	rc = hih8120_wakeup();
 	return rc;
 }
 
+//	Function to make the driver execute a measurement (declaration)
 hih8120_driverReturnCode_t temp_hum_measure()
 {
 	rc = hih8120_measure();

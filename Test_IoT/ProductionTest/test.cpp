@@ -57,12 +57,16 @@ protected:
 //	Fake function to create the Temp_Hum Sensor
 FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_create);
 
+//	Fake function to wakeup the Temp_Hum Sensor
 FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_wakeup);
 
+//	Fake function to make the Temp_Hum Sensor execute a measurement
 FAKE_VALUE_FUNC(hih8120_driverReturnCode_t, hih8120_measure);
 
+//	Fake function to get the Humidity from the Temp_Hum Sensor
 FAKE_VALUE_FUNC(uint16_t, hih8120_getHumidityPercent_x10);
 
+//	Fake function to get the Temperature from the Temp_Hum Sensor
 FAKE_VALUE_FUNC(int16_t, hih8120_getTemperature_x10);
 
 
@@ -158,13 +162,15 @@ TEST_F(CO2_Test, Test_CO2_measure_is_called_10_times) {
 TEST_F(CO2_Test, Test_CO2_set_data_is_called) {
 	//	Arrange
 	//	Act
+
+	uint16_t value = co2_getLastCO2ppm();
 	co2_getLatestMeasurement();
-	co2_getLastCO2ppm();
 
 	//	Assert
 	ASSERT_TRUE(mh_z19_getCo2Ppm_fake.call_count == 1);
 	EXPECT_TRUE(0 == mh_z19_getCo2Ppm_fake.return_val);
 	ASSERT_TRUE(1500 == co2_getLastCO2ppm());
+	ASSERT_FALSE(value == co2_getLastCO2ppm());
 }
 
 
