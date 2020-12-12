@@ -10,8 +10,10 @@
 //	Function to initialize the driver
 void temp_hum_initalizeDriver();
 
+//	Function to wake up the driver
 hih8120_driverReturnCode_t temp_hum_wake_up();
 
+//	Function to make the driver execute a measurement
 hih8120_driverReturnCode_t temp_hum_measure();
 
 //	Function to return the last measured humidity
