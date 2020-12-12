@@ -38,7 +38,7 @@
     <ExecutablePath>D:\Test_IoT\Test_IoT\ProductionTest;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\SEP4_IoT_Test\Test_IoT\ProductionTest\drivers;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Toma\Documents\Atmel Studio\7.0\SEP4_IoT_Test\Test_IoT\ProductionTest\drivers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="co2.c" />
